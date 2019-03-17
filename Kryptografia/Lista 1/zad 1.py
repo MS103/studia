@@ -59,10 +59,10 @@ def modinv(b, n):  # Odwrócone modulo
 
 
 ## PROGRAM WLAŚCIWY
-seed = 5
-a = 1664525
-b = 1013904223
-m = 2 ** 32  # Musi być można zrobić (x_1 - x_0) * y mod(m) = 1, dla dowolnego y < m .
+seed = 10534
+a = 672257317069504227
+b = 7382843889490547368
+m = 9223372036854775783 #Liczba pierwsza; Musi być można zrobić (x_1 - x_0) * y mod(m) = 1, dla dowolnego y < m .
 
 states = []
 lcg = LCG(seed=seed, a=a, b=b, m=m)

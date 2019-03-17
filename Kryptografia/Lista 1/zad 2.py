@@ -28,7 +28,7 @@ seed = 1
 
 glibc = GLIBC(seed)
 numbers = []
-for i in range(10000):
+for i in range(100000):
     numbers.append(glibc.random())
 if_predicted = []
 
