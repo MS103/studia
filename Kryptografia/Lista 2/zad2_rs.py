@@ -21,12 +21,10 @@ def KSARS(key, n, t):
 
 d = 1
 n = 256
-t = int(round(2*n*np.log(n)))
-length = (10**6)*4
-key = 'hi i am john and this is a random text with no periods or capitals or commas this is just simply a random ' \
-      'text with no hard words that many find challenging to type in due to the unusual order of the letters so i ' \
-      'thought id just keep it easy thought thought thought thought thats a easy word to type depending on youre your ' \
-      'highest WPM rank'
-keystream_list = rc4_mdrop_d(key, n, t, d, KSARS)
-f = open(r"C:\Users\Latitude\Desktop\Studia - Git_repo\studia\Kryptografia\Lista 2\diehard\test.txt", 'w')
-f.write(keystream_list)
+t = int(round(2 * n * np.log(n)))
+length = 10
+key = 'Wiki'
+keystream_list = rc4_mdrop_d(key, n, t, d, KSARS, length)
+binary = num2hexb(keystream_list)
+f = open(r"C:\Users\Latitude\Desktop\Studia - Git_repo\studia\Kryptografia\Lista 2\test.txt", 'w')
+f.write(binary)

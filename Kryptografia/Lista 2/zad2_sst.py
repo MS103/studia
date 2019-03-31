@@ -28,11 +28,11 @@ def KSASST(key, n, t):
     return s
 
 
-d = 0
-t = n = 16
-length = 10
+d = 1
+t = n = 256
+length = 10 ** 8
 key = 'Wiki'
 keystream_list = rc4_mdrop_d(key, n, t, d, KSASST, length)
-print(keystream_list)
-f = open(r"C:\Users\Latitude\Desktop\Studia - Git_repo\studia\Kryptografia\Lista 2\diehard\test.txt", 'w')
-f.write(keystream_list)
+binary = num2hexb(keystream_list)
+f = open(r"C:\Users\Latitude\Desktop\Studia - Git_repo\studia\Kryptografia\Lista 2\test.txt", 'w')
+f.write(binary)

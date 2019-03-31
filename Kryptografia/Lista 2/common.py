@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def PRGA(S, n):
     i = 0
     j = 0
@@ -22,7 +25,7 @@ def rc4_drop_d(key, n, t, d, ksa_alg, length):
 
 
 def rc4_mdrop_d(key, n, t, d, ksa_alg, length):
-    stream = num2hex(rc4(key, n, t, ksa_alg, length))
+    stream = rc4(key, n, t, ksa_alg, length)
     return stream[slice(0, len(stream) + 1, d + 1)]
 
 
@@ -44,3 +47,7 @@ def num2bin(l):
 
 def num2hex(l):
     return ''.join([format(x, '02X') for x in l])
+
+
+def num2hexb(l):
+    return ''.join([format(x, '08X') + '\n' for x in l])
